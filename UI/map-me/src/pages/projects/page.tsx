@@ -1,5 +1,3 @@
-// map-me/src/pages/showProjects.tsx
-
 import { FC, useEffect, useState } from 'react';
 
 interface Project {

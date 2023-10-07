@@ -11,9 +11,10 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tanstack/react-query": "^4.35.7",
+    "@visx/hierarchy": "^3.3.0",
+    "@visx/network": "^3.3.0",
     "next": "^13.4.19",
     "next-auth": "^4.23.0",
-    "papaparse": "^5.4.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "zod": "^3.21.4"

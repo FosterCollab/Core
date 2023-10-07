@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import FeatureSection from "../components/featureSection";
-import FAQ from "../components/faq";
+import FeatureSection from "../components/landingPage/featureSection";
+import FAQ from "../components/landingPage/faq";
 
 const Home: React.FC = () => {
 	return (
