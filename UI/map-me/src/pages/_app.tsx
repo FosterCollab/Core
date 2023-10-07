@@ -4,7 +4,7 @@ import { type AppType } from "next/app";
 import { QueryProvider } from "./api/query/Providers";
 import { Suspense } from "react";
 import Navbar from "../components/navbar";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 
 import "~/styles/globals.css";
 

@@ -1,7 +1,7 @@
 import React from "react"
-import Image from "next/image";
 
-export default function FAQ() {
+
+const FAQ: React.FC = () => {
 	return (
 		<section className="sectionSize items-start pt-8 md:pt-36 bg-black text-white">
 			<div>
@@ -53,3 +53,4 @@ export default function FAQ() {
 
 	)
 }
+export default FAQ

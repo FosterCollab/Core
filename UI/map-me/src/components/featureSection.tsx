@@ -1,7 +1,6 @@
 import React from "react"
-import Image from "next/image";
 
-export default function FeatureSection() {
+const FeatureSection: React.FC = () => {
 	return (
 		<section className="sectionSize bg-secondary">
 			<div>
@@ -65,3 +64,4 @@ export default function FeatureSection() {
 		</section>
 	)
 }
+export default FeatureSection

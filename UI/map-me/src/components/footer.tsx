@@ -1,7 +1,6 @@
 import React from "react"
-import Image from "next/image";
 
-export default function Footer() {
+const Footer: React.FC = () => {
 	return (
 		<section className="bg-black sectionSize">
 			<div className="mb-4">
@@ -27,3 +26,5 @@ export default function Footer() {
 	  </section>
 	)
 }
+
+export default Footer
