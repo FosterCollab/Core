@@ -28,3 +28,10 @@ services:
     build: ./api
     ports:
       - "8080:8080"
+
+  ui:
+      build: ./UI
+      ports:
+        - "3000:3000"
+      depends_on:
+        - api
