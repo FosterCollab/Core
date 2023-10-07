@@ -17,12 +17,19 @@ const ShowProjects: FC = () => {
       try {
         const response = await fetch('/api/getProjects');
         const data: Project[] = await response.json();
+  
+        if (!Array.isArray(data)) {
+          console.error("Expected data to be an array but received:", data);
+          return;
+        }
+  
         setProjects(data);
       } catch (error) {
         console.error("Failed to fetch projects:", error);
+        setProjects([]); // Set to an empty array on error
       }
     };
-
+  
     fetchProjects();
   }, []);
 
