@@ -17,7 +17,7 @@ COPY UI/map-me/ .
 RUN npm run build
 
 # Set a default value for PORT
-ENV PORT 8080
+ENV PORT 3000
 
 # Specify the "start" command as the default command with port configuration
 CMD ["npm", "start", "-p", "$PORT"]
