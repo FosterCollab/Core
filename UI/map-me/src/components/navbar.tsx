@@ -1,8 +1,7 @@
 "use client";
 import React from "react"
-import Image from "next/image";
 
-export default function Navbar() {
+const Navbar: React.FC = () => {
 	return (
 		<div>
 			<nav className="fixed flex justify-between py-6 w-full lg:px-48 md:px-12 px-4 content-center bg-secondary z-10">
@@ -51,3 +50,4 @@ export default function Navbar() {
 		</div>
 	)
 }
+export default Navbar

@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import FeatureSection from "../components/featureSection";
-import FAQ from "../components/faq"; 
+import FAQ from "../components/faq";
 
-export default function Home() {
+const Home: React.FC = () => {
 	return (
 		<>
 			<Head>
@@ -177,3 +176,4 @@ export default function Home() {
 		</>
 	);
 }
+export default Home
