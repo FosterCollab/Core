@@ -1,5 +1,3 @@
-// map-me/src/pages/add-to-json.tsx
-
 import { useState, FC } from 'react';
 
 interface Data {

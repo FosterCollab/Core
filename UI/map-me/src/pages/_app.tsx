@@ -3,8 +3,8 @@ import { SessionProvider } from "next-auth/react";
 import { type AppType } from "next/app";
 import { QueryProvider } from "./api/query/Providers";
 import { Suspense } from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer";
+import Navbar from "../components/header/navbar";
+import Footer from "../components/footer/footer";
 
 import "~/styles/globals.css";
 

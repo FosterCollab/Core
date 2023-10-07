@@ -1,4 +1,4 @@
-import Search from "./search";
+import Search from "../tables/search";
 
 export default function Loading() {
 	return (
