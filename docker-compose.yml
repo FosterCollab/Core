@@ -12,6 +12,7 @@ services:
       POSTGRES_PASSWORD: example
     ports:
       - "5432:5432"
+    command: ["postgres", "-c", "log_statement=all"]
 
   dbtools:
     container_name: pgadmin4_container
