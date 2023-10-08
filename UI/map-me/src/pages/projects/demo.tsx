@@ -7,7 +7,7 @@ interface Project {
   datePosted: string;
 }
 
-const ShowProjects: FC = () => {
+const Projects: FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ const ShowProjects: FC = () => {
 );
 }
 
-export default ShowProjects;
+export default Projects;
