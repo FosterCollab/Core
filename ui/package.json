@@ -1,10 +1,10 @@
 {
-  "name": "map-me",
+  "name": "foster-collab",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "./node_modules/.bin/next dev",
     "lint": "next lint",
     "start": "next start"
   },
