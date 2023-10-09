@@ -2,22 +2,23 @@
 FROM node:20.8.0
 
 # Set the directory to directory containing the Next.js app
-WORKDIR /UI/map-me
+WORKDIR /ui
 
-# Copy package.json and package-lock.json from UI/map-me into the container
-COPY map-me/package*.json ./
+# Copy package.json and package-lock.json from ui into the container
+COPY package*.json ./
 
 # Install project dependencies
 RUN npm install
 
-# Copy the rest of your app's source code from UI/map-me directory into the image filesystem.
-COPY map-me/ .
+# Copy the rest of your app's source code from ui directory into the image filesystem.
+COPY ./ .
 
 # Build the app for production
 RUN npm run build
 
 # Set a default value for PORT
-ENV PORT 3000
+ENV PORT 3000 \
+	SKIP_ENV_VALIDATION=true
 
 # Specify the "start" command as the default command with port configuration
 CMD ["npm", "start", "-p", "$PORT"]
