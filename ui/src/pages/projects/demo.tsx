@@ -1,6 +1,6 @@
 import { type FC, useState, useEffect } from "react";
-import fs from "fs";
 import path from "path";
+import { fetchDemoData } from "../../components/utilities/fetchDemoData"
 
 interface Project {
 	name: string;
@@ -12,6 +12,16 @@ interface Project {
 interface ProjectsProps {
 	projects: Project[];
 }
+
+export async function getServerSideProps() {
+	// Path to the JSON file within the public directory
+	const filePath = path.join(process.cwd(), "public", "demoData", "projects.json");
+
+	const projects = await fetchDemoData(filePath);  // use our utility function
+
+	return { props: { projects } };
+}
+
 
 const Projects: FC<ProjectsProps> = ({ projects }) => {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -59,21 +69,6 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
 			</div>
 		</div>
 	);
-}
-
-export async function getServerSideProps() {
-	try {
-		// Path to the JSON file within the public directory
-		const filePath = path.join(process.cwd(), "public", "demoData", "projects.json");
-
-		// Read data from the file
-		const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-
-		return { props: { projects: data } };
-	} catch (error) {
-		console.error("Failed to fetch projects:", error);
-		return { props: { projects: [] } };
-	}
 }
 
 export default Projects;

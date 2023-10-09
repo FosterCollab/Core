@@ -4,15 +4,14 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "./node_modules/.bin/next dev",
+    "dev": "next dev",
     "lint": "SKIP_ENV_VALIDATION=true next lint -- --fix",
     "start": "next start"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tanstack/react-query": "^4.35.7",
-    "@visx/hierarchy": "^3.3.0",
-    "@visx/network": "^3.3.0",
+    "d3": "^7.8.5",
     "next": "^13.4.19",
     "next-auth": "^4.23.0",
     "react": "18.2.0",
@@ -23,6 +22,7 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
     "@tanstack/eslint-plugin-query": "^4.36.0",
+    "@types/d3": "^7.4.1",
     "@types/eslint": "^8.44.2",
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.20",

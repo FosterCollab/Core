@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
     
@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
 		<div>
 			<nav className="fixed flex justify-between py-6 w-full lg:px-48 md:px-12 px-4 content-center bg-secondary z-10">
 				<div className="flex items-center">
-					<img src='/assets/Logo_black.svg' alt="Logo" className="h-4" />
+					<Link href="/"><img src='/assets/Logo_black.svg' alt="Logo" className="h-4" /></Link>
 				</div>
 				<ul className="font-montserrat items-center hidden md:flex">
 					<li className="growing-underline mx-3">
@@ -22,12 +22,12 @@ const Navbar: React.FC = () => {
 						</Link>
 					</li>
 					<li className="growing-underline mx-3">
-						<Link href="/charts/network">
+						<Link href="/nodeNetwork/demo">
 							Network Nodes
 						</Link>
 					</li>
 					<li className="growing-underline mx-3">
-						<Link href="/contact">
+						<Link href="/contact/client">
 							Get in Touch
 						</Link>
 					</li>
